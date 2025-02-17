@@ -1,7 +1,7 @@
 header {
   text-align: center;
   font-size: 30px;
-  color: #279EFF;
+  color: #0d0d0e;
 }
 
 main, html {
@@ -11,7 +11,7 @@ main, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0C356A;
+  background-color: #e7e184;
 }
 
 .container {
@@ -24,7 +24,7 @@ main, html {
   margin: 10px;
   font-size: 24px;
   border: none;
-  background-color: #3498db;
+  background-color: #207dbb;
   cursor: pointer;
   border-radius: 5px;
 }
