@@ -18,12 +18,17 @@ function mostrarAlerta(){
     alert("AMO JS");
 } 
 // T6 Crear funcion en boton "suma", pide 2 números y muestra el resultado de la suma en una alerta. 
+// funcion sumaDosNumeros(), se ingresan los numeros, 
+// funcion sumaResultadoDosNumeros(), se valida y reinica la suma. 
 function sumaDosNumeros(){
     let primerNumero = parseInt(prompt('Digite el primer numero'));
+    //console.log(`primerNumero: +$[primerNumero]`);
+     // if (primerNUmero === null){
+    //     return; }
+    // else{   
     let segunNumero = parseInt(prompt('Digite el segundo numero'));
-    sumaResultado(primerNumero, segunNumero)     
-    //let resultado = primerNumero + segunNumero;
-    //alert(`${primerNumero} + ${segunNumero} = ${resultado}`);
+    sumaResultado(primerNumero, segunNumero);
+    // }
 }
 
 function sumaResultado(primerNumero, segunNumero) {
@@ -31,7 +36,8 @@ function sumaResultado(primerNumero, segunNumero) {
       alert("No son numeros, intente nuevamente");
       sumaDosNumeros();
     }
-    let resultado = primerNumero + segunNumero;
-    alert(`${primerNumero} + ${segunNumero} = ${resultado}`); 
-    return 0;   
+    else{
+        let resultado = primerNumero + segunNumero;
+        return alert(`${primerNumero} + ${segunNumero} = ${resultado}`); 
+     }
   }
