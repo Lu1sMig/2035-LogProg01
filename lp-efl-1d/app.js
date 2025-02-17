@@ -1,4 +1,4 @@
-// 1
+// 2 Tarea 1: Cambiar etiqueta h1 y mostrar 'Hora del Desafío'
 let titulo = document.querySelector('h1');
 titulo.innerHTML = 'Hora del Desafío';
 
