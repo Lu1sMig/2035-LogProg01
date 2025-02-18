@@ -13,10 +13,12 @@ function mostrarPromt() {
     let ciudad = prompt("Por favor, ingresa el nombre de una ciudad de Perú:");
     alert("Estuve en " + ciudad + " y me acordé de ti.");
 }
+
 // T5 Crear función que muestre mensaje de alerta: "Amo JS" siempre que se presione el botón "Alerta". 
 function mostrarAlerta(){
     alert("AMO JS");
 } 
+
 // T6 Crear funcion en boton "suma", pide 2 números y muestra el resultado de la suma en una alerta. 
 // funcion sumaDosNumeros(), se ingresan los numeros, 
 // funcion sumaResultadoDosNumeros(), se valida y reinica la suma. 
