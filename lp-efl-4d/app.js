@@ -1,43 +1,54 @@
-// 1 Crea una lista vacía con el nombre listaGenerica. javascript
-let listaGenerica = [];
-
+// 1 Crea una lista vacía con el nombre listaGenerica. 
+function listaGenerica(){
+    let listaGenerica = [];
+    console.log(`T1. Valor de listaGenerica es: ${listaGenerica}`)
+}
 // 2. Crea una lista de lenguajes de programación llamada lenguagesDeProgramacion.
-let lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
-
+function ingresarLenguagesDeProgramación(lenguagesDeProgramacion){
+    //let lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+    return lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+}
 // 3. Agrega a la lista lenguagesDeProgramacion los siguientes elementos.
-lenguagesDeProgramacion.push('Java', 'Ruby', 'GoLang');
-
-// 4. Crea una función que muestre en la consola todos los elementos de la lista lenguagesDeProgramacion por separado.
-function mostrarLenguagesSeparadamente() {
+function agregarLenguagesDeProgramación(){
+    lenguagesDeProgramacion.push('Java', 'Ruby', 'GoLang');
+}
+// 4. Crea una función que muestre en la consola todos los elementos de la lista
+// lenguagesDeProgramacion por separado.
+function tareacuatro(){
+    const lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python','Java', 'Ruby', 'GoLang'];
+    mostrarLenguagesSeparadamente(lenguagesDeProgramacion);
+}
+function mostrarLenguagesSeparadamente(lenguagesDeProgramacion) {
   for (let i = 0; i < lenguagesDeProgramacion.length; i++) {
     console.log(lenguagesDeProgramacion[i]);
   }
 }
-
-mostrarLenguagesSeparadamente();
-
-// 5. Crea una función que muestre en la consola todos los elementos de la lista lenguagesDeProgramacion de manera inversa.
-function mostrarLenguagesReversoSeparadamente() {
-  for (let i = lenguagesDeProgramacion.length - 1; i >= 0; i--) {
+// 5. Crea una función que muestre en la consola todos los elementos de la lista
+//  lenguagesDeProgramacion de manera inversa.
+function tareacinco(){
+    const lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python','Java', 'Ruby', 'GoLang'];
+    mostrarLenguagesReversoSeparadamente(lenguagesDeProgramacion);
+}
+function mostrarLenguagesReversoSeparadamente(lenguagesDeProgramacion) {
+    for (let i = lenguagesDeProgramacion.length - 1; i >= 0; i--) {
     console.log(lenguagesDeProgramacion[i]);
   }
 }
 
-mostrarLenguagesReversoSeparadamente();
-
 // 6. Crea una función que calcule la media de los elementos en una lista de números.
 function calcularMedia(lista) {
-  let suma = 0;
-  for (let i = 0; i < lista.length; i++) {
-    suma += lista[i];
-  }
-  return suma / lista.length;
+    let suma = 0;
+    for (let i = 0; i < lista.length; i++) {
+        suma += lista[i];
+    }
+    return suma / lista.length;
 }
-
-let numeros = [10, 20, 30, 40, 50];
-let media = calcularMedia(numeros);
-console.log('Média:', media);
-
+function ingresarMedia(){
+    let numeros = [10, 20, 30, 40, 50];
+    let media = calcularMedia(numeros);
+    console.log('Média:', media);
+}
+/*
 // 7. Crea una función que muestre en la consola el número mayor y menor en una lista.
 function encontrarMayorMenor(lista) {
   let mayor = lista[0];
@@ -58,7 +69,7 @@ function encontrarMayorMenor(lista) {
 
 let numeros = [15, 8, 25, 5, 12];
 encontrarMayorMenor(numeros);
-
+/*
 // 8. Crea una función que retorne la suma de todos los elementos en una lista.
 function calcularSuma(lista) {
   let suma = 0;
@@ -92,12 +103,13 @@ function sumarListas(lista1, lista2) {
     const lista2 = [4, 5, 6];
     const resultado = sumarListas(lista1, lista2);
     console.log(resultado);  
-    
+    */
 // 11. Crea una función que reciba una lista de números y devuelva una nueva lista con el cuadrado de cada número.
 function cuadradoLista(lista) {
     return lista.map(num => num ** 2);
 }
-
+function cuadradoIngresarLista() {
 const lista = [2, 3, 4];
 const resultado = cuadradoLista(lista);
-console.log(resultado);  
+console.log(`De los valores ${lista} sus cuadrados son ${resultado}`); 
+}
