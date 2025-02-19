@@ -3,25 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 4</title>
-    <h1>Desafio 4</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>lp-efl-4d</title>        
 </head>
 <body>
-    <!--T1,T2,T3-->
-    <button onclick="listaGenerica()" class="button">T1 visualizar Lista</button>
-    <!--T4 Crea una función que muestre en la consola todos los elementos de la lista lenguagesDeProgramacion 
-    por separado. -->
-    <button onclick="tareacuatro()" class="button">T4 Mostrar Lenguages Separadamente</button>
-    <!-- T5. Crea una función que muestre en la consola todos los elementos de la lista lenguagesDeProgramacion
-     de manera inversa.-->
-    <button onclick="tareacinco()" class="button">T5 Mostrar lenguajes Separadamente</button>
-    
-    <button onclick="" class="button">E6</button>
-    <button onclick="" class="button">E7</button>
-    <button onclick="" class="button">E8</button>
-    <button onclick="" class="button">E9</button>
-    <button onclick="" class="button">E10</button>
-    <button onclick="cuadradoIngresarLista()" class="button">Calcula el cuadrado de una lista</button>
-    <script src="app.js"></script>
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <img src="./img/array-js.png" alt="LogoJS-Array" class="container__imagen-persona"/>
+                <div class="container__texto">
+                    <h1>Desafio 4</h1>
+                    
+                    <div class="chute container__botones">
+                        <table>
+                            <caption>
+                              Awesome caption
+                            </caption>
+                            <tr>
+                                <td> <!--T1,T2,T3-->
+                                    <button onclick="listaGenerica()" class="container__boton">T1 visualizar Lista</button></td>
+                                <td> <!--T4 Crear función que muestre en consola los elementos de lista lenguagesDeProgramacion por separado. -->
+                                    <button onclick="tareacuatro()" class="container__boton">T4 Mostrar Lenguages Separadamente</button></td>
+                                <td>
+                                    <!-- T5. Crea una función que muestre en la consola todos los elementos de la lista lenguagesDeProgramacion
+                                    de manera inversa.-->
+                                    <button onclick="tareacinco()" class="container__boton">T5 Mostrar lenguajes Separadamente</button></td>
+                            <tr>
+                                <td>
+                                    <button onclick="ingresarMedia()" class="container__boton">E6 Hallar la media de numeros</button></td>
+                                <td>
+                                    <button onclick="registrarMayorMenor()" class="container__boton">E7 Encuentra el numero mayor</button></td>
+                                <td>
+                                    <button onclick="ingresarSuma()" class="container__boton">E8 Halla la suma de una lista </button></td>
+                            </tr>
+                            <tr>
+                                <td><!-- 9. Crea una función que reciba una lista como parámetro y retorne el índice de un elemento 
+                                    // también pasado como parámetro. Si ese elemento no existe en la lista, retorna -1. -->
+                                    <button onclick="ingresarLista()" class="container__boton">E9 Retornar parametro de la lista</button></td>
+                                <td> <!-- 10 dos listas de números -->
+                                    <button onclick="ingresarListas()" class="container__boton">E10 Suma de listas</button></td>
+                                <td>
+                                    <button onclick="cuadradoIngresarLista()" class="container__boton">Calcula el cuadrado de una lista</button>
+                                </td>
+                            </tr>                         
+                          </table>
+
+                    </div>
+                    <p class="texto__parrafo">El resultado de este desafio</p>
+                </div>
+                <!-- <img src="./img/array-js.png" alt="LogoJS-Array" class="container__imagen-persona"/> -->
+            </div>
+            <!-- <img src="./img/array-js.png" alt="LogoJS-Array" class="container__imagen-persona"/> -->
+        </div>
+       
+    </div>  
 </body>
+<script src="app.js"></script>
 </html>

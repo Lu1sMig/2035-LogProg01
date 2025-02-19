@@ -48,7 +48,7 @@ function ingresarMedia(){
     let media = calcularMedia(numeros);
     console.log('Média:', media);
 }
-/*
+
 // 7. Crea una función que muestre en la consola el número mayor y menor en una lista.
 function encontrarMayorMenor(lista) {
   let mayor = lista[0];
@@ -67,9 +67,11 @@ function encontrarMayorMenor(lista) {
   console.log('Menor:', menor);
 }
 
-let numeros = [15, 8, 25, 5, 12];
-encontrarMayorMenor(numeros);
-/*
+function registrarMayorMenor(){
+    let numeros = [15, 8, 25, 5, 12];
+    encontrarMayorMenor(numeros);
+}
+
 // 8. Crea una función que retorne la suma de todos los elementos en una lista.
 function calcularSuma(lista) {
   let suma = 0;
@@ -78,11 +80,11 @@ function calcularSuma(lista) {
   }
   return suma;
 }
-
-let numeros = [15, 8, 25, 5, 12];
-let suma = calcularSuma(numeros);
-console.log('Suma:', suma);
-
+function ingresarSuma(){
+    let numeros = [15, 8, 25, 5, 12];
+    let suma = calcularSuma(numeros);
+    console.log('Suma:', suma);
+}
 // 9. Crea una función que reciba una lista como parámetro y retorne el índice de un elemento 
 // también pasado como parámetro. Si ese elemento no existe en la lista, retorna -1.
 function encontrarIndiceElemento(lista, elemento) {
@@ -93,17 +95,24 @@ function encontrarIndiceElemento(lista, elemento) {
      }
      return -1; // Retorna -1 si el elemento no se encuentra en la lista
    }
+function ingresarLista(){
+    let numero = [15, 8, 25, 5, 12];
+    let elemento = 25;
+    let posicion = encontrarIndiceElemento(numero, elemento)+1;
+    console.log(`Elemento ${elemento} se encontro en la posición:`, posicion);
+}
 
 // 10. Crea una función que reciba dos listas de números del mismo tamaño y devuelva una nueva lista con la suma de los elementos uno a uno.
 function sumarListas(lista1, lista2) {
         return lista1.map((num, index) => num + lista2[index]);
     }
-    
+function ingresarListas(){
     const lista1 = [1, 2, 3];
     const lista2 = [4, 5, 6];
     const resultado = sumarListas(lista1, lista2);
     console.log(resultado);  
-    */
+}    
+        
 // 11. Crea una función que reciba una lista de números y devuelva una nueva lista con el cuadrado de cada número.
 function cuadradoLista(lista) {
     return lista.map(num => num ** 2);
