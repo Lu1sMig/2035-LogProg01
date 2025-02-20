@@ -1,13 +1,33 @@
+function asignarTextoElemento(elemento, texto) {
+    let elementoHTML = document.querySelector(elemento);
+    elementoHTML.innerHTML = texto;
+    return;
+}
+
+function condicionesIniciales() {
+    asignarTextoElemento('h1','¡Pulsa un boton para iniciar con el DESAFIO 04 de LP-EFL!');
+    //asignarTextoElemento('p',`Indica un número del 1 al ${numeroMaximo}`);
+    // numeroSecreto = generarNumeroSecreto();
+    // intentos = 1;
+    // console.log(numeroSecreto);
+}
+condicionesIniciales() 
+
 // 1 Crea una lista vacía con el nombre listaGenerica. 
 function listaGenerica(){
     let listaGenerica = [];
     console.log(`T1. Valor de listaGenerica es: ${listaGenerica}`)
+    asignarTextoElemento('p',`T1. Valor de listaGenerica es: ${listaGenerica}`);
+    
 }
 // 2. Crea una lista de lenguajes de programación llamada lenguagesDeProgramacion.
 function ingresarLenguagesDeProgramación(lenguagesDeProgramacion){
     //let lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
-    return lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+    lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+    return asignarTextoElemento('p',`T2. La lista de lenguajeDeProgramacion: ${lenguagesDeProgramacion}`);
 }
+
+
 // 3. Agrega a la lista lenguagesDeProgramacion los siguientes elementos.
 function agregarLenguagesDeProgramación(){
     lenguagesDeProgramacion.push('Java', 'Ruby', 'GoLang');
@@ -19,10 +39,19 @@ function tareacuatro(){
     mostrarLenguagesSeparadamente(lenguagesDeProgramacion);
 }
 function mostrarLenguagesSeparadamente(lenguagesDeProgramacion) {
+  listView = document.querySelector('#list1');  
   for (let i = 0; i < lenguagesDeProgramacion.length; i++) {
     console.log(lenguagesDeProgramacion[i]);
+    listView.innerHTML += `<li>${lenguagesDeProgramacion[i]}</li>`;
   }
 }
+// function tareacuatroB(){
+// var list = [ 'Eum perferendis aliquam id.', 'Voluptatum recusandae eligendi eius rerum ut nemo error.', 'Dolores ex nobis vel ipsa deleniti nulla doloribus.', ];
+// var listView = document.querySelector('#list1');
+// list.forEach((item) => {
+// listView.innerHTML += `<li>${item}</li>`;
+// });
+// }
 // 5. Crea una función que muestre en la consola todos los elementos de la lista
 //  lenguagesDeProgramacion de manera inversa.
 function tareacinco(){
@@ -122,3 +151,4 @@ const lista = [2, 3, 4];
 const resultado = cuadradoLista(lista);
 console.log(`De los valores ${lista} sus cuadrados son ${resultado}`); 
 }
+
