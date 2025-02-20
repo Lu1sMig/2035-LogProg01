@@ -6,16 +6,15 @@ function asignarTextoElemento(elemento, texto) {
 
 function condicionesIniciales() {
     asignarTextoElemento('h1','¡Pulsa un boton para iniciar con el DESAFIO 04 de LP-EFL!');
-    //asignarTextoElemento('p',`Indica un número del 1 al ${numeroMaximo}`);
-    // numeroSecreto = generarNumeroSecreto();
-    // intentos = 1;
-    // console.log(numeroSecreto);
+    asignarTextoElemento('p',`El resultado de este desafio es:`);
+    asignarTextoElemento('ul',``);
 }
 condicionesIniciales() 
 
 // 1 Crea una lista vacía con el nombre listaGenerica. 
 function listaGenerica(){
     let listaGenerica = [];
+    condicionesIniciales()
     console.log(`T1. Valor de listaGenerica es: ${listaGenerica}`)
     asignarTextoElemento('p',`T1. Valor de listaGenerica es: ${listaGenerica}`);
     
@@ -23,7 +22,7 @@ function listaGenerica(){
 // 2. Crea una lista de lenguajes de programación llamada lenguagesDeProgramacion.
 function ingresarLenguagesDeProgramación(lenguagesDeProgramacion){
     //let lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
-    lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+    lenguajesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
     return asignarTextoElemento('p',`T2. La lista de lenguajeDeProgramacion: ${lenguagesDeProgramacion}`);
 }
 
@@ -35,33 +34,35 @@ function agregarLenguagesDeProgramación(){
 // 4. Crea una función que muestre en la consola todos los elementos de la lista
 // lenguagesDeProgramacion por separado.
 function tareacuatro(){
-    const lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python','Java', 'Ruby', 'GoLang'];
-    mostrarLenguagesSeparadamente(lenguagesDeProgramacion);
+    var lenguajesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+    lenguajesDeProgramacion.push('Java', 'Ruby', 'GoLang');
+    mostrarLenguajesSeparadamente(lenguajesDeProgramacion);
 }
-function mostrarLenguagesSeparadamente(lenguagesDeProgramacion) {
-  listView = document.querySelector('#list1');  
-  for (let i = 0; i < lenguagesDeProgramacion.length; i++) {
-    console.log(lenguagesDeProgramacion[i]);
-    listView.innerHTML += `<li>${lenguagesDeProgramacion[i]}</li>`;
-  }
+function mostrarLenguajesSeparadamente(lenguajesDeProgramacion) {
+    condicionesIniciales()
+    listView = document.querySelector('#list1');  
+    lenguajesDeProgramacion.forEach((lenguaje) => {
+    listView.innerHTML += `<li>${lenguaje}</li>`;
+    //listView.textContent += `<li>${lenguaje}</li>`;   
+  });
 }
-// function tareacuatroB(){
-// var list = [ 'Eum perferendis aliquam id.', 'Voluptatum recusandae eligendi eius rerum ut nemo error.', 'Dolores ex nobis vel ipsa deleniti nulla doloribus.', ];
-// var listView = document.querySelector('#list1');
-// list.forEach((item) => {
-// listView.innerHTML += `<li>${item}</li>`;
-// });
-// }
+
 // 5. Crea una función que muestre en la consola todos los elementos de la lista
 //  lenguagesDeProgramacion de manera inversa.
 function tareacinco(){
-    const lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python','Java', 'Ruby', 'GoLang'];
-    mostrarLenguagesReversoSeparadamente(lenguagesDeProgramacion);
+    var lenguajesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python'];
+    lenguajesDeProgramacion.push('Java', 'Ruby', 'GoLang');
+    mostrarLenguagesReversoSeparadamente(lenguajesDeProgramacion);
 }
-function mostrarLenguagesReversoSeparadamente(lenguagesDeProgramacion) {
-    for (let i = lenguagesDeProgramacion.length - 1; i >= 0; i--) {
-    console.log(lenguagesDeProgramacion[i]);
-  }
+function mostrarLenguagesReversoSeparadamente(lenguajesDeProgramacion) {
+    condicionesIniciales()
+    listView = document.querySelector(`#list1`);
+    const reversed = lenguajesDeProgramacion.reverse();
+    reversed.forEach((lenguaje) => {
+        listView.innerHTML += `<li>${lenguaje}</li>`;
+    });
+    // for (let i = lenguagesDeProgramacion.length - 1; i >= 0; i--) {
+    // console.log(lenguagesDeProgramacion[i]);
 }
 
 // 6. Crea una función que calcule la media de los elementos en una lista de números.
